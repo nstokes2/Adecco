@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adecco", "Adecco\Adecco.csproj", "{86D2DCDF-8C9C-46D5-A871-54197DC265BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLHelper", "XMLHelper\XMLHelper.csproj", "{DD667972-0753-4812-AC16-A8C360F3278C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86D2DCDF-8C9C-46D5-A871-54197DC265BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D2DCDF-8C9C-46D5-A871-54197DC265BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D2DCDF-8C9C-46D5-A871-54197DC265BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D2DCDF-8C9C-46D5-A871-54197DC265BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD667972-0753-4812-AC16-A8C360F3278C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD667972-0753-4812-AC16-A8C360F3278C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD667972-0753-4812-AC16-A8C360F3278C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD667972-0753-4812-AC16-A8C360F3278C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

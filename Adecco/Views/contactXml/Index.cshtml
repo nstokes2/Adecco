@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Adecco.Models;
+@model IEnumerable<Adecco.Models.Contact>
+<h2>Contact List from XML</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+   
+    </tr>
+
+   
+ 
+    @{ var list = Model.ToList();
+        for (int i = 0; i < list.Count; i++)
+        {
+            <tr>
+                <td>@Html.ActionLink((list[i].Name), "Details", new { id = list[i].Id })</td>
+
+            </tr>
+
+        }
+        <tr>
+            <td>
+                @Html.ActionLink("First", "Index", new { id = 0 })
+            </td> 
+            <td> @Html.ActionLink("Second", "Index", new { id = 1 })  </td>
+            <td>
+                @Html.ActionLink("Third", "Index", new { id = 2 })
+            </td> 
+        </tr>
+
+
+    }
+
+</table>  
