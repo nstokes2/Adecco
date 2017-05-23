@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-
+using Adecco.App_Data;
 namespace Adecco.Models
 {
     public class ContactContext : DbContext
@@ -17,8 +17,34 @@ namespace Adecco.Models
     
         public ContactContext() : base("name=ContactContext")
         {
+            Database.SetInitializer<ContactContext>(new ContactDBInitializer());
         }
 
         public System.Data.Entity.DbSet<Adecco.Models.Contact> Contacts { get; set; }
+    }
+
+    public class ContactDBInitializer : DropCreateDatabaseAlways<ContactContext>
+    {
+
+        protected override void Seed(ContactContext context)
+        {
+            IList<Contact> contacts = new List<Contact>();
+
+            XMLReader xmlRead = new XMLReader();
+
+            var data = xmlRead.ReturnContacts();
+
+            for(int i = 0; i<data.Count; i++)
+            contacts.Add(data[i]);
+
+
+
+            foreach (Contact contact in contacts)
+                context.Contacts.Add(contact);
+            base.Seed(context);
+        }
+
+
+
     }
 }
